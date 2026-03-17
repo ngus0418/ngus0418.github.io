@@ -1,0 +1,109 @@
+/* Natalie Gustafson */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body content styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    position: relative;
+    /* needed for pseudo-element layering */
+}
+
+/* Pseudo-element for background image */
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1920&auto=format&fit=crop") no-repeat center center;
+    background-size: cover;
+    opacity: 0.15;
+    /* low opacity so content is readable */
+    z-index: -1;
+    /* ensures content is on top */
+}
+
+/* CENTER CONTENT PROPERLY */
+body>* {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* SECTIONS */
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
+}
+
+/* HEADINGS */
+h2 {
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    /* important for perfect circle */
+    border-radius: 50%;
+    /* THIS makes it a circle */
+    object-fit: cover;
+    /* prevents stretching */
+    margin-bottom: 10px;
+}
+
+ul,
+ol {
+    padding-left: 20px;
+    /* controls indentation */
+    margin-left: 0;
+    /* prevents extra shifting */
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+h1,
+h2,
+h3 {
+    color: #2a2a2a;
+    /* dark gray for readability */
+}
+
+ul li,
+ol li {
+    color: #444;
+    /* slightly lighter gray */
+}
